@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:text="Dr. Jhon Smith"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"/>
+
+        <TextView
+            android:id="@+id/tvQualification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BSc, MBBS,DDVL ,MD-Dermitologist"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="16 yes. Experience"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:text="89% (4394 votes)"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:weightSum="4"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_60sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/therapist_img2"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_60sdp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/therapist_img1"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_60sdp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/therapist_img3"/>
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                app:riv_corner_radius="@dimen/_10sdp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_60sdp"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:src="@drawable/therapist_img4"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:text="In Climic Fees : "
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:id="@+id/tvOpenClosingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:text="$10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btBook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textStyle="bold"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:background="@drawable/button_sky_blue"
+                android:textColor="@color/prime_green"
+                android:text="Book"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="@dimen/_200sdp"
+                android:src="@drawable/therapy"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200sdp"
+                android:background="@color/light_black"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_back_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:text="Psychiatrist"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp"/>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:elevation="@dimen/_5sdp"
+                app:contentPadding="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_170sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_height="wrap_content">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvCliniName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:text="Jhon Eye Clinic"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_14sdp"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:rating="4"
+                            style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:weightSum="3"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="Closed today"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:id="@+id/tvTime"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textAllCaps="true"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="9:30AM 08:00PM"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:textAllCaps="true"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="All Timing"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_10sdp"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvlocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="92/6 ,3rd Floor, Outer Road, Chandra Layout"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableLeft="@drawable/edit_location"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"/>
+
+                       <ImageView
+                           android:layout_width="match_parent"
+                           android:layout_height="@dimen/_100sdp"
+                           android:layout_marginTop="@dimen/_10sdp"
+                           android:scaleType="fitXY"
+                           android:src="@drawable/map01"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:textAllCaps="true"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:layout_marginLeft="@dimen/_2sdp"
+                            android:text="Services"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="Opthaimology"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:singleLine="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="Artificial Therapy"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:singleLine="true"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:text="Heart Treatment"
+                            android:textSize="@dimen/_10sdp"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_150sdp"
+                            android:scaleType="fitXY"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:visibility="gone"
+                            android:src="@drawable/google_map"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:background="@drawable/blue_outline"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/sponsored2"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="@dimen/_10sdp"
+                                android:textColor="@color/blue"
+                                android:text="Give Feedback"/>
+
+                            <TextView
+                                android:id="@+id/bt_book"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.5"
+                                android:layout_height="match_parent"
+                                android:textAllCaps="false"
+                                android:gravity="center"
+                                android:paddingTop="@dimen/_15sdp"
+                                android:paddingBottom="@dimen/_15sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:textStyle="bold"
+                                android:background="@drawable/button_blue"
+                                android:textColor="@color/white"
+                                android:text="Book"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

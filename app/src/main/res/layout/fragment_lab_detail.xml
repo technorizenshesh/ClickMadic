@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_back"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_80sdp"
+                android:background="@drawable/bottom_round_blue"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    android:elevation="@dimen/_10sdp"
+                    app:contentPadding="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:drawableLeft="@drawable/edit_cup"
+                                android:text="MBBS, DOMS ,Ms"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:drawableLeft="@drawable/edit_user_gray"
+                                android:text="Opthaimology"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="10 years old"/>
+                        </LinearLayout>
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.2"
+                            android:layout_height="@dimen/_50sdp"
+                            android:src="@drawable/therapist_img3"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:src="@drawable/ic_arrow_back_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="205 Diagostic labs in mum..."
+                    android:textSize="@dimen/_15sdp"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:text="Services"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Opthaimology"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Plasma"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Heart Treatment"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:textColor="@color/blue_dark"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="All Services"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="92/6 ,3rd Floor, Outer Road, Chandra Layout"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/edit_location"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/map01"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/_2sdp"
+                    android:text="Photos"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:weightSum="4"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_height="@dimen/_60sdp"
+                        app:riv_corner_radius="@dimen/_10sdp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/therapist_img2"/>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_height="@dimen/_60sdp"
+                        app:riv_corner_radius="@dimen/_10sdp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/therapist_img1"/>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_height="@dimen/_60sdp"
+                        app:riv_corner_radius="@dimen/_10sdp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/therapist_img3"/>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:layout_height="@dimen/_60sdp"
+                        app:riv_corner_radius="@dimen/_10sdp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:src="@drawable/therapist_img4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/blue_outline"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sponsored2"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:textColor="@color/blue"
+                        android:text="Give Feedback"/>
+
+                    <TextView
+                        android:id="@+id/bt_book"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent"
+                        android:textAllCaps="false"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_15sdp"
+                        android:paddingBottom="@dimen/_15sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textStyle="bold"
+                        android:background="@drawable/button_blue"
+                        android:textColor="@color/white"
+                        android:text="Book"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>

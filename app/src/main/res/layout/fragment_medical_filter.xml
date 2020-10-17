@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/blue"
+              android:textSize="@dimen/_15sdp"
+              android:textStyle="bold"
+              android:layout_marginLeft="@dimen/_10sdp"
+              android:layout_marginTop="@dimen/_10sdp"
+              android:text="Filter"/>
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/blue"
+              android:textSize="@dimen/_15sdp"
+              android:layout_alignParentRight="true"
+              android:layout_marginRight="@dimen/_10sdp"
+              android:layout_marginTop="@dimen/_10sdp"
+              android:text="Clear Filter"/>
+
+      </RelativeLayout>
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:fillViewport="true"
+           android:scrollbars="none">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="@dimen/_10sdp"
+               android:orientation="vertical">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/_12sdp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:text="Sort By"/>
+
+               <RadioButton
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:buttonTint="@color/prime_green"
+                   android:text="Consultation Fee"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/_12sdp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:text="Availability"/>
+
+               <RadioGroup
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Available Any Day"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Available Today"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Available In Next 3 Days"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Available Coming Weekend"/>
+               </RadioGroup>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/_12sdp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:text="In Hospital"/>
+
+               <RadioButton
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:buttonTint="@color/prime_green"
+                   android:text="In Hospital"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/_12sdp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:text="Online Booking"/>
+
+               <RadioButton
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/_10sdp"
+                   android:buttonTint="@color/prime_green"
+                   android:text="Online Booking"/>
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/_12sdp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:text="Consultation Fee"/>
+
+               <RadioGroup
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Free"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="1-200"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="201-500"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="500-1000"/>
+               </RadioGroup>
+
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="@dimen/_12sdp"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="@dimen/_10sdp"
+                   android:layout_marginTop="@dimen/_15sdp"
+                   android:text="Gender"/>
+
+               <RadioGroup
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_10sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Male"/>
+
+                   <RadioButton
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="@dimen/_5sdp"
+                       android:buttonTint="@color/prime_green"
+                       android:text="Female"/>
+
+               </RadioGroup>
+
+               <TextView
+                   android:id="@+id/btApply"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:textAllCaps="false"
+                   android:paddingTop="@dimen/_15sdp"
+                   android:paddingBottom="@dimen/_15sdp"
+                   android:layout_marginLeft="@dimen/_5sdp"
+                   android:textStyle="bold"
+                   android:layout_margin="@dimen/_20sdp"
+                   android:gravity="center"
+                   android:background="@drawable/button_blue"
+                   android:textColor="@color/white"
+                   android:text="Apply"/>
+
+           </LinearLayout>
+
+       </ScrollView>
+
+
+
+   </LinearLayout>
+
+</layout>

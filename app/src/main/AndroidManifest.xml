@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.technorizen.doctorgo">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/logo_crysco"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/logo_crysco_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.SpalshActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.technorizen.doctorgo.profile.editprofile.LoadEditProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.technorizen.doctorgo.profile.activities.LoadLabSectionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.technorizen.doctorgo.medicalpsecialities.activities.LoadMedicalActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.insurance.activities.AppointmentInsuranceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.insurance.activities.LoadInsuranceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.emergency.activities.EmergencyPaymentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.emergency.activities.EmergencyHomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.nurseathome.activities.LoadNurseHomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.labathome.activities.AppointmentLabActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.labathome.activities.LoadLabAtHomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.clinics.activities.LoadClinicActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.onlinedoctors.activities.BookingPaymentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.onlinedoctors.activities.FillPatientDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.onlinedoctors.activities.ChildInfoForBookingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.onlinedoctors.activities.BookTestPacakgesOnlineActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.onlinedoctors.activities.MoreDoctorsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.onlinedoctors.activities.OnlineDoctorHomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.PaymentActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.SetDeliveryLocationActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.AddTimeAndDateActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.MyCartActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.ShopDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.pharmacy.activities.PharmaHomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.ConfirmTimeSlotsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.AvailableTimeSlotsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.ChatingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.AppointmentsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.DoctorProfileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.ClinicDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.DoctorsListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.HomeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.ForgotPassActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.EnterMobileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.SignUpActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.VerifyMobileActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.GetStartedActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.technorizen.doctorgo.activities.WelcomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.technorizen.doctorgo.MainActivity" />
+    </application>
+
+</manifest>
