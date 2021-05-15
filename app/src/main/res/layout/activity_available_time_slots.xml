@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="MissingDefaultResource">
-
+    <data>
+        <variable
+            name="doctor"
+            type="com.technorizen.crysco.ModelDoctorDetails" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,7 +40,7 @@
                     android:layout_width="match_parent"
                     app:cardCornerRadius="@dimen/_5sdp"
                     android:elevation="@dimen/_10sdp"
-                    app:contentPadding="@dimen/_15sdp"
+                    app:contentPadding="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_80sdp"
                     android:layout_marginLeft="@dimen/_10sdp"
@@ -55,14 +59,14 @@
                             android:textStyle="bold"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginLeft="@dimen/_2sdp"
-                            android:text="Dr. Jhon Smith"
+                            android:text="@{doctor.firstName}"
                             android:textColor="@color/black"
                             android:textSize="@dimen/_14sdp"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BSc, MBBS,DDVL ,MD-Dermitologist"
+                            android:text="@{doctor.qualification}"
                             android:gravity="center"
                             android:layout_marginTop="@dimen/_3sdp"
                             android:layout_gravity="center_horizontal"
@@ -72,25 +76,32 @@
 
                         <ScrollView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="@dimen/_20sdp"
-                                android:layout_marginRight="@dimen/_20sdp"
-                                android:layout_marginTop="@dimen/_30sdp"
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/tv_date"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/_12sdp"
                                     android:textColor="@color/black"
-                                    android:gravity="center"
-                                    android:text="Today, 8 Dec"/>
-
+                                    android:gravity="center" />
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                                    app:spanCount="3"
+                                    android:scrollbars="none"
+                                    android:id="@+id/recycle_view"/>
                                 <TextView
+                                    android:id="@+id/tv_no_record"
+                                    android:visibility="gone"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:textSize="@dimen/_12sdp"
@@ -100,7 +111,7 @@
                                     android:text="No slots available for today"/>
 
                                 <TextView
-                                    android:id="@+id/bt_book"
+                                    android:id="@+id/bt_next_day"
                                     android:layout_width="match_parent"
                                     android:layout_weight="0.5"
                                     android:layout_height="wrap_content"
@@ -113,7 +124,7 @@
                                     android:background="@drawable/button_blue"
                                     android:padding="@dimen/_10sdp"
                                     android:textColor="@color/white"
-                                    android:text="Next day availability on Sun, 09"/>
+                                    android:text="Check Next day availability"/>
 
                                 <ImageView
                                     android:id="@+id/btNext"

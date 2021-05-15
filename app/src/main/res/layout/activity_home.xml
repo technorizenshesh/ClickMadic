@@ -1,39 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@color/blue">
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_centerVertical="true"
+                app:civ_border_width="@dimen/_2sdp"
+                app:civ_border_color="@color/white"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/profile3"/>
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13sdp"
+                android:layout_toRightOf="@+id/ivProfile"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:text="Jhon Smith"/>
+
+            <ImageView
+                android:id="@+id/ivNoti"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/profileImg"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:src="@drawable/white_search"/>
+
+            <ImageView
+                android:id="@+id/profileImg"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_alignParentRight="true"
+                app:civ_border_width="@dimen/_1sdp"
+                app:civ_border_color="@color/white"
+                android:src="@drawable/notification"/>
+
+        </RelativeLayout>
         <FrameLayout
+            android:layout_marginTop="-2dp"
+            android:layout_below="@+id/header"
             android:id="@+id/content_frame"
             android:layout_above="@+id/nav_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </FrameLayout>
-
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/nav_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:paddingTop="@dimen/_10sdp"
-            app:labelVisibilityMode="labeled"
-            app:itemIconTint="@color/blue"
+            app:labelVisibilityMode="unlabeled"
             android:background="@color/white"
+            app:itemIconTint="@color/blue_dark"
             app:menu="@menu/bottom_nav_menu"/>
-
         <ImageView
             android:layout_width="@dimen/_60sdp"
             android:layout_height="@dimen/_60sdp"
             android:src="@drawable/plus"
             android:elevation="@dimen/_10sdp"
             android:clickable="false"
+            android:visibility="gone"
             android:layout_marginBottom="@dimen/_20sdp"
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"/>
-
     </RelativeLayout>
 
 </layout>

@@ -3,25 +3,32 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="MissingDefaultResource">
-
+    <data>
+        <variable
+            name="doctor"
+            type="com.technorizen.crysco.ModelDoctorDetails" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_150sdp"
                 android:background="@drawable/bottom_round_blue"/>
-
+            <ImageView
+                android:id="@+id/img_favorite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:src="@drawable/ic_favorite_border"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/_5sdp"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
@@ -32,7 +39,6 @@
                     android:layout_marginTop="@dimen/_30sdp"
                     app:civ_border_color="@color/white"
                     android:src="@drawable/doctor_profile"/>
-
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     app:cardCornerRadius="@dimen/_15sdp"
@@ -64,6 +70,7 @@
                             android:layout_height="wrap_content">
 
                             <TextView
+                                android:id="@+id/tv_rate"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textStyle="bold"
@@ -85,21 +92,20 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/tvName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginLeft="@dimen/_2sdp"
-                            android:text="Dr. Jhon Smith"
+                            android:text="@{doctor.firstName}"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/_14sdp"/>
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/tvQualification"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BSc, MBBS,DDVL ,MD-Dermitologist"
+                            android:text="@{doctor.getQualification}"
                             android:gravity="center"
                             android:layout_marginTop="@dimen/_3sdp"
                             android:layout_gravity="center_horizontal"
@@ -199,7 +205,7 @@
                                     android:textAllCaps="false"
                                     android:singleLine="true"
                                     android:layout_marginLeft="@dimen/_2sdp"
-                                    android:text="In Climic Fees : "
+                                    android:text="In Clinic Fees : "
                                     android:textSize="@dimen/_12sdp"/>
 
                                 <TextView
@@ -210,7 +216,7 @@
                                     android:textAllCaps="false"
                                     android:singleLine="true"
                                     android:layout_marginLeft="@dimen/_2sdp"
-                                    android:text="$10"
+                                    android:text="@{doctor.appointmentFee}"
                                     android:textColor="@color/black"
                                     android:textSize="@dimen/_12sdp"/>
 
@@ -232,7 +238,7 @@
                                 android:paddingRight="@dimen/_20sdp"
                                 android:background="@drawable/dark_blue_button_back"
                                 android:textColor="@color/white"
-                                android:text="Request"/>
+                                android:text="@string/book"/>
 
                         </RelativeLayout>
 
@@ -320,7 +326,7 @@
                         android:singleLine="true"
                         android:textAllCaps="true"
                         android:layout_marginLeft="@dimen/_2sdp"
-                        android:text="Closed today"
+                        android:text="@{doctor.availability}"
                         android:textColor="@color/red"
                         android:textSize="@dimen/_10sdp"/>
 
@@ -356,7 +362,7 @@
                     android:id="@+id/tvLocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="92/6 ,3rd Floor, Outer Road, Chandra Layout"
+                    android:text="@{doctor.address}"
                     android:layout_marginTop="@dimen/_20sdp"
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:drawablePadding="@dimen/_5sdp"
@@ -384,42 +390,18 @@
                     android:text="Specialization"
                     android:textSize="@dimen/_10sdp"/>
 
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:gravity="center"
-                    android:singleLine="true"
                     android:textColor="@color/black"
                     android:layout_marginLeft="@dimen/_5sdp"
-                    android:text="Opthaimology"
+                    android:text="@{doctor.specialization}"
                     android:textSize="@dimen/_10sdp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:singleLine="true"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:text="Artificial Therapy"
-                    android:textSize="@dimen/_10sdp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:gravity="center"
-                    android:textColor="@color/black"
-                    android:layout_marginBottom="@dimen/_10sdp"
-                    android:singleLine="true"
-                    android:layout_marginLeft="@dimen/_5sdp"
-                    android:text="Heart Treatment"
-                    android:textSize="@dimen/_10sdp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -477,6 +459,7 @@
                     android:layout_marginTop="@dimen/_10sdp"
                     android:textAllCaps="true"
                     android:gravity="center"
+                    android:visibility="gone"
                     android:singleLine="true"
                     android:layout_marginLeft="@dimen/_2sdp"
                     android:text="Also Practices At"
@@ -523,6 +506,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:elevation="@dimen/_15sdp"
+                    android:visibility="gone"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginRight="@dimen/_5sdp"
                     android:layout_marginTop="@dimen/_5sdp"
@@ -612,6 +596,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:elevation="@dimen/_15sdp"
+                    android:visibility="gone"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:layout_marginRight="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_10sdp"

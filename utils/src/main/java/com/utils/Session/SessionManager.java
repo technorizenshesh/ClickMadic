@@ -19,7 +19,7 @@ public class SessionManager {
     }
     public SessionManager(Context context) {
         this.context = context;
-        prf=context.getSharedPreferences(SessionKey.DB_Dahla.name(), Context.MODE_PRIVATE);
+        prf=context.getSharedPreferences(SessionKey.DB_Crysco.name(), Context.MODE_PRIVATE);
         edit=prf.edit();
     }
     public void setUserType(String type){

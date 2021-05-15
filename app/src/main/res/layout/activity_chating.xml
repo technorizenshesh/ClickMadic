@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <data>
+        <variable
+            name="user"
+            type="com.technorizen.crysco.pojos.UserDetails" />
+    </data>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -43,71 +47,32 @@
                     android:textStyle="bold"
                     android:layout_centerVertical="true"
                     android:textColor="@color/black"
-                    android:text="Jhon Simth"/>
+                    android:text="@{user.firstName}"/>
 
 
             </RelativeLayout>
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:layout_marginBottom="@dimen/_60sdp"
                 android:background="@color/edit_back_color">
-
-                <LinearLayout
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    android:id="@+id/recycle_view"/>
+                <TextView
+                    android:id="@+id/tv_no_record"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_15sdp"
-                    android:orientation="vertical">
+                    android:layout_centerInParent="true"
+                    android:text="@string/no_chat_found"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/white_chat_back"
-                        android:padding="@dimen/_10sdp"
-                        android:text="hi , Jhon \nHow is your lung problem?"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:layout_marginRight="@dimen/_2sdp"
-                        android:textSize="@dimen/_10sdp"
-                        android:text="5 min ago"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_15sdp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:textColor="@color/white"
-                        android:background="@drawable/blue_chat_back"
-                        android:padding="@dimen/_10sdp"
-                        android:text="I am Feeling better now \nThanks for the quick consultation and support"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:layout_marginRight="@dimen/_2sdp"
-                        android:textSize="@dimen/_10sdp"
-                        android:text="1 min ago"/>
-
-                </LinearLayout>
-
-            </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -133,6 +98,7 @@
                 android:orientation="horizontal">
 
                 <EditText
+                    android:id="@+id/et_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@null"
@@ -148,11 +114,16 @@
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/img_sent"
                 android:layout_width="0dp"
                 android:layout_weight="0.5"
                 android:layout_height="@dimen/_30sdp"
                 android:src="@drawable/send_msg"/>
-
+            <ProgressBar
+                android:id="@+id/progrss"
+                android:visibility="gone"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"/>
         </LinearLayout>
 
     </RelativeLayout>

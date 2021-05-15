@@ -125,15 +125,44 @@ public class Tools {
         context.startActivity(intent);
     }
     public enum Type{
-        DATE,TIME
+        DATE,TIME,DAY
     }
     public static String getCurrent(Type type){
         String cd="";
         Date c = Calendar.getInstance().getTime();
-        SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy");
-        SimpleDateFormat cf = new SimpleDateFormat("HH:mm a");
-        cd=type== Type.DATE?df.format(c):cf.format(c);
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy",Locale.US);
+        SimpleDateFormat cf = new SimpleDateFormat("HH:mm a",Locale.US);
+        SimpleDateFormat dayf = new SimpleDateFormat("EEEE",Locale.US);
+        cd=type== Type.DATE?df.format(c):type==Type.TIME?cf.format(c):dayf.format(c);
         return cd;
+    }
+    public static String getCurrent(String format){
+        String cd="";
+        Date c = Calendar.getInstance().getTime();
+        SimpleDateFormat df = new SimpleDateFormat(format,Locale.US);
+        return df.format(c);
+    }
+    public static String getNext(Type type,int i){
+        SimpleDateFormat df = new SimpleDateFormat("dd/MM/yyyy",Locale.US);
+        SimpleDateFormat dayf = new SimpleDateFormat("EEEE",Locale.US);
+        String cd="";
+        Date c = Calendar.getInstance().getTime();
+        Calendar calendar=Calendar.getInstance();
+        int date=calendar.get(Calendar.DATE);
+        int year=calendar.get(Calendar.YEAR);
+        int month=calendar.get(Calendar.MONTH);
+        calendar.set(year,month,date+i);
+        cd=type== Type.DATE?df.format(calendar.getTime()):dayf.format(calendar.getTime());
+        return cd;
+    } public static String getNext(String format,int i){
+        SimpleDateFormat df = new SimpleDateFormat(format,Locale.US);
+        Date c = Calendar.getInstance().getTime();
+        Calendar calendar=Calendar.getInstance();
+        int date=calendar.get(Calendar.DATE);
+        int year=calendar.get(Calendar.YEAR);
+        int month=calendar.get(Calendar.MONTH);
+        calendar.set(year,month,date+i);
+        return df.format(calendar.getTime());
     }
 
     public static void HideKeyboard(Context context, View view){
